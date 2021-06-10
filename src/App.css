@@ -1,0 +1,165 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.app,
+.app input,
+.app textarea {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+.app img {
+  vertical-align: top;
+}
+.app .search {
+  background-color: #eee;
+  padding: 5px 10px;
+}
+.app .search input {
+  background-color: #ccc;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  border: 0 none;
+  outline: 0 none;
+  padding: 2.5px 5px;
+}
+.app .app-lists {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.app .grossing-app-list .title {
+  font-size: 2em;
+  font-weight: 600;
+  margin: 10px;
+}
+.app .grossing-app-list .inner-list {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 0 5px;
+}
+.app .grossing-app-list .item {
+  flex: 0 0 auto;
+  color: inherit;
+  text-decoration: none;
+  white-space: normal;
+  vertical-align: top;
+  width: 100px;
+  margin: 5px;
+}
+.app .grossing-app-list .item .item-icon {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+.app .grossing-app-list .item .item-detail {
+  margin-top: 10px;
+}
+.app .grossing-app-list .item .item-detail .item-category {
+  color: #666;
+  margin-top: 0.25em;
+}
+.app .free-app-list .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: 1px solid #ccc;
+  color: inherit;
+  text-decoration: none;
+  animation: item-added 0.5s ease-out forwards;
+}
+.app .free-app-list .item:hover,
+.app .free-app-list .item:active {
+  background-color: #eee;
+}
+.app .free-app-list .item > * {
+  margin: 10px 10px;
+}
+.app .free-app-list .item .item-number {
+  font-size: 1.2em;
+  line-height: 1;
+  color: #666;
+}
+.app .free-app-list .item .item-icon {
+  border-radius: 10px;
+  width: 80px;
+  height: auto;
+}
+.app .free-app-list .item .item-detail {
+  align-self: flex-start;
+}
+.app .free-app-list .item .item-detail .item-name {
+  font-size: 1.2em;
+}
+.app .free-app-list .item .item-detail .item-category {
+  color: #666;
+}
+.app .free-app-list .item .item-detail .item-rating > * {
+  vertical-align: middle;
+}
+.app .free-app-list .item .item-detail .item-rating .item-rating-star {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.9em;
+  margin-right: 0.9em;
+  margin-bottom: 1.2em;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.7em solid #000;
+  border-left: 0.3em solid transparent;
+  /* Controlls the size of the stars. */
+  font-size: 10px;
+}
+.app .free-app-list .item .item-detail .item-rating .item-rating-star:before,
+.app .free-app-list .item .item-detail .item-rating .item-rating-star:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0.6em;
+  left: -1em;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid #000;
+  border-left: 1em solid transparent;
+  transform: rotate(-35deg);
+}
+.app .free-app-list .item .item-detail .item-rating .item-rating-star:after {
+  transform: rotate(35deg);
+}
+.app .free-app-list .item .item-detail .item-rating .item-rating-star.enabled {
+  border-bottom-color: #fc0;
+}
+.app .free-app-list .item .item-detail .item-rating .item-rating-star.enabled:before,
+.app .free-app-list .item .item-detail .item-rating .item-rating-star.enabled:after {
+  border-bottom-color: #fc0;
+}
+.app .free-app-list .item .item-detail .item-rating .item-rating-number {
+  font-size: 0.8em;
+  line-height: 1em;
+}
+.app .free-app-list .item:nth-child(2n) .item-icon {
+  border-radius: 50%;
+}
+.app .free-app-list .loading {
+  padding: 30px;
+  text-align: center;
+  background-color: #eee;
+  font-size: 1.2em;
+}
+@keyframes item-added {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+/*# sourceMappingURL=App.css.map */
